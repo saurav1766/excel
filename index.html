@@ -18,27 +18,59 @@
          <div class ="menu-icon-bar">
             <div class="material-icons  menu-icon icon-bold">format_bold</div>
             <div class="material-icons  menu-icon icon-italic">format_italic</div>
+
+            <select class="selector font-family-selector" >
+               <option style="font-family: Noto-Sans;" value="Noto-Sans">Noto-Sans</option>
+               <option style="font-family: Brush Script MT;" value="Brush Script MT">Brush Script MT</option>
+               <option style="font-family: Comic Sans MS;" value="Cmic Sans MS">Comic sans MS</option>
+            
+            </select>
+            <select class=" font-size-selector">
+               <option style="font-size: 10;" value="10">10</option>
+               <option style="font-size: 14 ;" value="14">14</option>
+               <option style="font-size: 18;" value="18">18</option>
+            </select>
+            
             <div class="material-icons  menu-icon icon-underline">format_underline</div>
             <div class="material-icons  menu-icon icon-cut">content_cut</div>
             <div class="material-icons menu-icon icon-copy">content_copy</div>
             <div class="material-icons menu-icon icon-paste">content_paste</div>
-            <div class="material-icons menu-icon icon-align_right">format_align_right</div>
             <div class="material-icons menu-icon icon-align_left">format_align_left</div>
             <div class="material-icons menu-icon icon-align_center">format_align_center</div>
-            <div class="material-icons menu-icon icon-color_fill">format_color_fill</div>
-            <div class="material-icons menu-icon icon-color_tex">format_color_text</div>
+            <div class="material-icons menu-icon icon-align_right">format_align_right</div>
+            <div class=" menu-icon icon-color_fill">
+               <input class="color-filler" type="color" />
+               <div class="material-icons format-color-fill">format_color_fill</div>
+            </div>
+            <div class="icon-color-filler">
+               <input class="color-filer" type="color" />
+               <div class="material-icons menu-icon icon-color_tex">format_color_text</div>
+            </div>
+           
          </div>
-         <div class ="formula-bar"></div>
+         <div class ="formula-bar">
+            <div class = "formula-input"></div>
+            <div class = "function">fx</div>
+            <div class = "formula-input-cell" contenteditable=true>
+               <input class = "fp-cell " type="text">
+            </div>
+         </div>
          <div class ="data-container">
             <div class ="select-all"></div>
             <div class ="column-name-container"></div>
             <div class ="raw-name-container"></div>
             <div class ="input-cells"></div>
          </div>
-         <div class ="sheet-bar"></div>
+         <div class ="sheet-bar">
+            <div class="material-icons  sheet-bar-icon icon-add">add</div>
+            <div class="sheet">sheet1</div>
+
+           
+         </div>
+             
       </div>
       
-      <script src="script.js"></script>
+      <script src="script.js" defer></script>
       
   </body>
   
