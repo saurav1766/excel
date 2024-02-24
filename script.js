@@ -1,9 +1,4 @@
-let original = document.querySelector(".container");
 
-let excelsheet = [original,original];
-let body=document.getElementsByTagName("body")[0]
-
-console.log(body)
 let defaultproperties = {
     text: "",
     "text-decoration": "",
@@ -26,6 +21,7 @@ let colname = document.querySelector(".column-name-container");
 let rowname = document.querySelector(".raw-name-container");
 
 let cell = document.querySelector(".input-cells")
+
 
 for (let j = 1; j <= 100; j++) {
 
@@ -58,20 +54,21 @@ for (let j = 1; j <= 100; j++) {
 }
 
 for (let i = 1; i <= 100; i++) {
-    let cel = document.createElement('div')
-    cel.setAttribute("class", "cell-raw")
-    cel.setAttribute("id", `id-${i}`)
+    let cel = document.createElement('div');
+    cel.setAttribute("class", "cell-raw");
+    cel.setAttribute("id", `id-${i}`);
 
     for (let j = 1; j <= 100; j++) {
-        let cells = document.createElement('div')
-        cells.setAttribute("class", `${i} ${j} cells`);
-        cells.setAttribute("id", `${i}-${j}`)
-
-        cel.appendChild(cells)
-
+        let celll = document.createElement('div'); // Fix the variable name here
+        celll.setAttribute("class", `${i} ${j} cells`);
+        celll.setAttribute("id", `${i}-${j}`);
+        console.log("hello");
+        cel.appendChild(celll);
     }
-    cell.appendChild(cel)
+    document.querySelector(".input-cells").appendChild(cel)
+    
 }
+
 
 document.querySelector(".cells").classList.add("select")
 cell.addEventListener("click", function (e) {
@@ -136,6 +133,7 @@ function getRawCol(e) {
 }
 
 cell.addEventListener("dblclick", (e) => {
+    console.log("reached here")
     e.target.setAttribute("contenteditable", "true");
 
 
@@ -285,11 +283,3 @@ document.querySelector(".icon-add").addEventListener("click", function (e) {
 })
 
 console.log(celldata);
-
-for (const iterator of excelsheet) {
-console.log(body,"jjjj")
-
-var copiedDiv = original.cloneNode(true);
-    body.appendChild(copiedDiv)
-    console.log(iterator)
-}
